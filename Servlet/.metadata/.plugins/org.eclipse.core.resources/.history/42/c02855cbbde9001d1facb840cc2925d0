@@ -1,0 +1,141 @@
+package com.adda.app.Controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
+import org.eclipse.jdt.internal.compiler.ast.ForeachStatement;
+
+import com.adda.app.Bean.Contect;
+import com.adda.app.Bean.User;
+import com.adda.app.DAO.IContectInterface;
+import com.adda.app.DAO.IUserInterface;
+import com.adda.app.DAO.impl.IContectInterfaceImpl;
+import com.adda.app.DAO.impl.UserInterfaceimpl;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class PhoneBookController
+ */
+public class PhoneBookController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    private IUserInterface i = new UserInterfaceimpl();
+    private IContectInterface i1 = new IContectInterfaceImpl();
+    private User u=null;
+    private Contect c=null;
+    /**
+     * Default constructor. 
+     */
+    public PhoneBookController() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//1. addUser
+		/*u=new User();
+		u.setuName("ishwari");
+		u.setuAddress("pidhay");
+		u.setuEmail("sheetal@gmail.com");
+		u.setuMobile("12345677");
+		u.setuPassword("sheetal123");
+		u.setuRole("user");
+	  try {
+		i.save(u);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}*/
+		
+		
+		//2.view AllStudentList
+		
+		/*List<User> l=i.viewAllUser();
+		for(User u:l) 
+	{
+			System.out.println(u);
+	}*/
+		
+		
+		
+		//3. Delete By id 
+		//i.deleteById(2);
+		
+		
+	 //4. UpdateUser 
+    /* 	u=new User();
+		u.setuId(14);	
+		u.setuName("Rajesh Patidar");
+		u.setuAddress("pidhay");
+		u.setuEmail("rajesh@gmail.com");
+		u.setuMobile("12345677");
+		u.setuPassword("rajesh123");
+    	u.setuRole("user");
+	  try
+	   {
+		i.save(u);
+	    }
+	  catch (SQLException e) {
+	// TODO Auto-generated catch block
+		e.printStackTrace();
+		  }
+	  List<User> l=i.viewAllUser();
+	 System.out.println(l);*/
+		
+		
+		
+		//1.addContect
+		/*c=new Contect();
+		c.setcName("surbhi");
+		c.setcEmail("sheetal@gmail.com");
+		c.setcMobile("7067576774");
+		c.setcAddress("indor");
+		c.setcIsfav(false);
+		c.setCuId(10);
+		c.setGuId(1);
+		i1.save(c);*/
+
+		//2.updateContect
+	/*	c=new Contect();
+		c.setcId(3);
+		c.setcName("ishhh");
+		c.setcEmail("ishhh@gmail.com");
+		c.setcMobile("7067576774");
+		c.setcAddress("indor-bhawarkuaa");
+		c.setcIsfav(false);
+		c.setCuId(5);
+		c.setGuId(1);
+		i1.save(c);*/
+		
+		//3.viewAllContect
+	/*	List<Contect>list=i1.viewAllContect();
+		for(Contect con :list) 
+		{
+			System.out.println(con);
+		}*/
+		
+		//4.Delete Contect
+		//i1.deleteContectById(3);
+		
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

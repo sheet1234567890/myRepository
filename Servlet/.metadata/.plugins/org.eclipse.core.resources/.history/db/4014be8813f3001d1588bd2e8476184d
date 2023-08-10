@@ -1,0 +1,8 @@
+package com.adda.app.Bean;
+
+public class User {
+private Integer id;
+private String fullname;
+private  String email;
+private String  password;
+}

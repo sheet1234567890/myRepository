@@ -1,0 +1,8 @@
+package com.adda.app.Dao;
+
+import com.adda.app.Bean.User;
+
+public interface IUserInterface {
+ public void ragistration(User user);
+ public List<User>view();
+}

@@ -1,0 +1,8 @@
+package com.adda.app.Bean;
+
+public class Employee {
+   private Integer eid;
+   private String ename;
+   private String edep;
+   private Double esal;
+}

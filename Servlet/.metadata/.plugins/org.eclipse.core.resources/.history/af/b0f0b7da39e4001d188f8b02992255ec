@@ -1,0 +1,57 @@
+package com.adda.app.dao.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.adda.app.Bean.User;
+import com.adda.app.Dbconnection.DBConnection;
+import com.adda.app.dao.IuserInterface;
+import com.mysql.cj.protocol.Resultset;
+
+public class IUserInterfaceimpl implements IuserInterface {
+ private final static String INSERT_USER="INSERT into User values(?,?,?,?)";
+ private final static String SELECT_USER="SELECT * FROM user";
+ private Connection con = null;
+ @Override
+	public Boolean creat(User user)throws Exception {
+	con=DBConnection.getConnection();
+	PreparedStatement pstmt = con.prepareStatement(INSERT_USER);
+	pstmt.setString(1, user.getUid());
+	pstmt.setString(2, user.getUname());
+	pstmt.setString(3, user.getUsalary());
+	int i = pstmt.executeUpdate();
+	if(i>0)
+		
+	{
+		System.out.println("success");
+		return true;
+	}
+	else {
+		System.out.println("not success");
+	
+		return false;
+	}
+	}
+
+	@Override
+	public List<User> view() throws SQLException {
+		con=DBConnection.getConnection();
+		ArrayList<User> userlist = new ArrayList();
+		PreparedStatement pstmt = con.prepareStatement("SELECT_USER");
+		ResultSet rs = pstmt.executeQuery();
+		while(rs.next()) 
+		{
+			User user = new User();
+			user.setUid(rs.getString("uid"));
+			user.setUname(rs.getString("Uname"));
+			user.setUsalary(rs.getString("Usalary"));
+			userlist.add(user);
+		}
+		return userlist;
+	}
+
+}

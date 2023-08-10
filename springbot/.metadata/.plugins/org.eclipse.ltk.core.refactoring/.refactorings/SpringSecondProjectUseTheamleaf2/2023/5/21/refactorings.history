@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpringSecondProjectUseTheamleaf2/src/main/resources/static/images/logo (2).jpg&apos; to &apos;logo.jpg&apos;" description="Rename resource &apos;logo (2).jpg&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/static/images/logo (2).jpg" name="logo.jpg" stamp="1685108315058" updateReferences="true"/>
+</session>

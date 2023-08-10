@@ -1,0 +1,13 @@
+package googleaddbatch.fatchRecord;
+
+import java.sql.DriverManager;
+
+public class fetchRecord {
+   
+	public static void main(String args[]) throws ClassNotFoundException 
+	{
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection con =   DriverManager.getConnection(DB_URL, DB_UNAME, DB_PWD);
+	}
+}
+

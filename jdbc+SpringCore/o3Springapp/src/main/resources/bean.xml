@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="eob"
+    class="com.adda.app.bean.ExcelExportService"
+   
+    init-method="setup"
+    destroy-method="clean"> 
+    <property name="fileName" value="sheetal"></property>
+    <property name="mode" value="CSV FORMATE"></property>
+	
+	</bean>
+
+</beans>

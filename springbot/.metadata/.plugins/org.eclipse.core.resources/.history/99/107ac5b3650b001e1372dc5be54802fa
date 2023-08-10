@@ -1,0 +1,53 @@
+package com.adda.app.ServiceImpl;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.adda.app.Entity.Album;
+import com.adda.app.Exceptions.AlbumNotFoundException;
+import com.adda.app.Reposataryy.IRAlbumRepo;
+import com.adda.app.Service.IAlbumService;
+@Service
+public class AlbumServiceImpl implements IAlbumService {
+	/**Album Repository*/
+    @Autowired
+	private IRAlbumRepo arepo; 
+	
+    /**Create Album....*/
+	@Override
+	public Album CreateAlbum(Album album) {
+		//Integer id = arepo.getAlbum(album.getAlbumtitle());
+//		if(id==null) {
+	//	System.out.println(id);
+		return arepo.save(album);
+		//}
+		//else 
+		//{
+	//		throw new AlbumNotFoundException("Album Alredy Exists..");
+		//}
+	}
+  /**Get Album By Id*/
+	@Override
+	public Album getAlbumById(Integer id) {
+		Optional<Album> a = arepo.findById(id);
+		if(a.isPresent()) 
+		{
+			return a.get();
+		}
+		else 
+		{
+			throw new AlbumNotFoundException("Album Not Found");
+		}
+	}
+  /**Get All Album....*/
+	@Override
+	public List<Album> getAllAlbum() {
+		return arepo.findAll();
+	}
+	
+
+
+}

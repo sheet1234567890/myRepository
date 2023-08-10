@@ -1,0 +1,11 @@
+package com.adda.app.dao;
+
+import java.util.List;
+
+import com.adda.app.Bean.User;
+
+public interface IuserInterface {
+	public Boolean creat(User user);
+	public List<User>view();
+
+}

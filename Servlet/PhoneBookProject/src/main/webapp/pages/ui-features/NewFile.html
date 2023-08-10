@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form id="myform">
+      <br />
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phoneNo" name="phone" />
+      <br />
+      <br />
+      <button type="submit">Submit</button>
+      <br />
+      <br />
+      <div id="result"></div>
+    </form>
+
+    <script>
+      function validateNumber(input) {
+        var re = /^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/
+
+        return re.test(input)
+      }
+
+      function validateForm(event) {
+        var number = document.getElementById('phoneNo').value
+        if (!validateNumber(number)) {
+          alert('Please enter a valid number')
+          const ele = document.getElementById('result')
+          ele.innerHTML = 'Validation Failed'
+          ele.style.color = 'red'
+        } else {
+          const ele = document.getElementById('result')
+          ele.innerHTML = 'Validation Successful'
+          ele.style.color = 'green'
+        }
+        event.preventDefault()
+      }
+
+      document.getElementById('myform').addEventListener('submit', validateForm)
+    </script>
+  </body>
+</html>

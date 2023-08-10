@@ -1,0 +1,54 @@
+
+table.maintab {
+    width: 100%;
+    
+}
+tr.footer {
+    width: 100%;
+    height: 50px;
+    background-color: pink;
+}
+
+tr.header {
+    width: 100%;
+    height: 50px;
+    background-color: pink;
+}
+td.leftsidebar {
+    width: 25%;
+    height: 400px;
+    background-color: black;
+}
+a {
+    border: 2px solid white;
+    color: blue;
+    padding: 5px;
+    margin: 4px 2px;
+    font-family: cursive;
+}
+a:hover {
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+li {
+    margin-top: 22px;
+}
+form {
+    border: 2px solid black;
+    width: 40%;
+    text-align: center;
+    background-color: lightblue;
+}
+.formdiv {
+    padding: 30px;
+}
+td.contentarea {
+    background-color: beige;
+}
+img.clogo {
+    height: 138px;
+    padding-left: 10px;
+    padding: top;
+    padding-top: 10px;
+}@charset "ISO-8859-1";

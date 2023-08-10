@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;OneToMany&apos; to &apos;OneToManyMapping&apos;" description="Rename resource &apos;OneToMany&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/OneToMany" name="OneToManyMapping" stamp="1683541273097" updateReferences="true"/>
+</session>

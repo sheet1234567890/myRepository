@@ -1,0 +1,7 @@
+package com.adda.app.StudentReposatary;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface StudentRepo extends CrudRepository<T, ID> {
+
+}

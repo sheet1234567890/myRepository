@@ -1,0 +1,30 @@
+package com.adda.app.DAO.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import com.adda.app.DAO.IEmployee4interface;
+import com.adda.app.bean.Employee4;
+import com.adda.app.util.DbConnection;
+
+
+public class Employee4interfaceimpl implements IEmployee4interface {
+	private final String INSERT_SQL="INSERT INTO emp VALUES(?,?,?)";
+	@Override
+	public List <Employee4> InsertRecord(Employee4 e) throws SQLException {
+		// TODO Auto-generated method stub
+
+
+		
+		
+		
+	}
+
+
+
+
+}

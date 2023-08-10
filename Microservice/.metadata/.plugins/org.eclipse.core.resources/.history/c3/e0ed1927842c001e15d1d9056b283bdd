@@ -1,0 +1,36 @@
+package com.adda.app.Controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.adda.app.PayLoad.User;
+import com.adda.app.producer.KafkaProducer;
+import com.adda.app.producer.jsonKafkaProducer;
+
+@RestController
+@RequestMapping("/api/v1/kafka")
+public class JsonMsgController {
+
+private jsonKafkaProducer jsonkafkaProducer;
+
+	
+	
+	public JsonMsgController(jsonKafkaProducer jsonkafkaProducer) 
+	{
+		super();
+		this.jsonkafkaProducer=jsonkafkaProducer;
+	}
+	
+	@PostMapping("/publish")
+	public ResponseEntity <String>publish(@RequestBody User user)
+	{
+		System.out.println(user);
+		
+		jsonkafkaProducer.sendmsg(user);
+	   return ResponseEntity.ok("json msg sent to the Kafka topic");
+	}
+}

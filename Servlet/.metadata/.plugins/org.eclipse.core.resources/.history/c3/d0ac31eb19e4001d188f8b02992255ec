@@ -1,0 +1,8 @@
+package com.adda.app.Bean;
+
+public class User {
+	private Integer Uid;
+	private String Uname;
+	private String Usalary;
+
+}

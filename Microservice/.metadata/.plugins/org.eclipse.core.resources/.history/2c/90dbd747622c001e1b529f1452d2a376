@@ -1,0 +1,5 @@
+package com.adda.app.producer;
+
+public class KafkaProducer {
+
+}

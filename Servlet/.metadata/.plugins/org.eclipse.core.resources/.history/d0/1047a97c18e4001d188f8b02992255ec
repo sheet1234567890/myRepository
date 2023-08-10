@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home page</title>
+	<link rel="stylesheet" type="text/css" href="css\style.css">
+
+</head>
+<body>
+	<table class="maintab">
+		<tr class="header">
+			<td class ="headertab" colspan=2>
+            <img src=".\image\logo.png" class="clogo" alt="c-logo">
+			</td>
+
+		</tr>
+		<tr class="middle">
+			<td class="leftsidebar">
+			 <p class="navbar">
+			 	<li>
+			 		<a href="addUser.jsp">studentadd</a>
+			 	</li>
+			 	<li>
+			 		<a href="viewUser.jsp">viewStrudent</a>
+			 	</li>
+			 	
+			 </p>
+			</td>
+			<td class="contentarea">
+				
+			</td>
+		</tr>
+		<tr class="footer">
+			<td class="footertab" colspan=2></td>
+		</tr>	
+	</table>
+
+</body>
+</html>

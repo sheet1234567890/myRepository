@@ -1,0 +1,47 @@
+package com.adda.app.Controller;
+
+import java.io.IOException;
+
+import com.adda.app.Bean.User;
+import com.adda.app.DAO.UserDAO;
+import com.adda.app.DAOimpl.UserImpl;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class HospitalController
+ */
+public class HospitalController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public HospitalController() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		User u = new User();
+		u.setFullname("sheetal patidar");
+		u.setEmail("sheetal@gmail.com");
+		u.setPassword("shee123");
+		UserDAO u1 = new UserImpl();
+		u1.UserRAgistration(u);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

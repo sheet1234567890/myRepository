@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;6juneCustomExceptionGeneratePractise&apos; to &apos;6juneCustomExceptionGeneratePractiseinTuesday&apos;" description="Rename resource &apos;6juneCustomExceptionGeneratePractise&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/6juneCustomExceptionGeneratePractise" name="6juneCustomExceptionGeneratePractiseinTuesday" stamp="1686041061463" updateReferences="true"/>
+</session>

@@ -1,0 +1,314 @@
+2023-04-29 21:45:09,555 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-30 15:25:06,019 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-30 15:25:55,530 [Worker-11: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dollop.app:03springapp:0.0.1-SNAPSHOT @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\03springapp\pom.xml.
+2023-04-30 15:25:55,734 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:55,736 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\03springapp\src\main\resources
+2023-04-30 15:25:55,743 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:55,745 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\03springapp\src\test\resources
+2023-04-30 15:25:56,099 [Worker-11: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dollop.app:04SpringLifeCycle:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\04SpringLifeCycle\pom.xml.
+2023-04-30 15:25:56,515 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:56,525 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:25:56,563 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:56,566 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\04SpringLifeCycle\src\test\resources
+2023-04-30 15:25:56,964 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dollop.app:05SpringLifeCycle:0.0.1-SNAPSHOT @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\05SpringLifeCycle\pom.xml.
+2023-04-30 15:25:57,227 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:57,230 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:25:57,236 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:57,240 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\05SpringLifeCycle\src\test\resources
+2023-04-30 15:25:57,432 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.dollo1.app:07SpringjavaConfig:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\07SpringjavaConfig\pom.xml.
+2023-04-30 15:25:57,703 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:57,707 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:25:57,712 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:57,715 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\07SpringjavaConfig\src\test\resources
+2023-04-30 15:25:57,889 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:09SpringLifeCycle:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\09SpringLifeCycle\pom.xml.
+2023-04-30 15:25:58,621 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:58,625 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:25:58,629 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:25:58,631 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\09SpringLifeCycle\src\test\resources
+2023-04-30 15:25:59,897 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app.AnnotationConfiuration:AnnotationConfiguration:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AnnotationConfiguration\pom.xml.
+2023-04-30 15:26:00,269 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:00,272 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:26:00,276 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:00,280 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AnnotationConfiguration\src\test\resources
+2023-04-30 15:26:00,455 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:AutowiringUsingXml:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowiringUsingXml\pom.xml.
+2023-04-30 15:26:00,747 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:00,750 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:26:00,754 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:00,757 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowiringUsingXml\src\test\resources
+2023-04-30 15:26:00,911 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:AutowirweAnnotationforAutowiring:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowirweAnnotationforAutowiring\pom.xml.
+2023-04-30 15:26:01,196 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:01,198 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowirweAnnotationforAutowiring\src\main\resources
+2023-04-30 15:26:01,203 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:01,206 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowirweAnnotationforAutowiring\src\test\resources
+2023-04-30 15:26:01,784 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:InteraceAssignmentSpringCore:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\InteraceAssignmentSpringCore\pom.xml.
+2023-04-30 15:26:01,833 [Worker-25: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/04SpringLifeCycle: com.dollop.app:04SpringLifeCycle:1.0 with classifier  to /04SpringLifeCycle/target/classes
+2023-04-30 15:26:02,207 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:02,211 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\InteraceAssignmentSpringCore\src\main\resources
+2023-04-30 15:26:02,217 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:02,220 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\InteraceAssignmentSpringCore\src\test\resources
+2023-04-30 15:26:02,717 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app.bean:SPRINGTAS_COUNTConstructor_method_field_inners_INAClass:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\SPRINGTAS_COUNTConstructor_method_field_inners_INAClass\pom.xml.
+2023-04-30 15:26:02,978 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:02,981 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\SPRINGTAS_COUNTConstructor_method_field_inners_INAClass\src\main\resources
+2023-04-30 15:26:02,986 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:02,991 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\SPRINGTAS_COUNTConstructor_method_field_inners_INAClass\src\test\resources
+2023-04-30 15:26:03,168 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:StandAloneCollectionproject:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\StandAloneCollectionproject\pom.xml.
+2023-04-30 15:26:03,357 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:03,362 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:26:03,366 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:03,369 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\StandAloneCollectionproject\src\test\resources
+2023-04-30 15:26:03,822 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: xmlConfiuration:com.adda.app:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\com.adda.app\pom.xml.
+2023-04-30 15:26:03,890 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:03,894 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\com.adda.app\src\main\resources
+2023-04-30 15:26:03,898 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:03,901 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\com.adda.app\src\test\resources
+2023-04-30 15:26:04,688 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:interfaceusingConfiguration:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\interfaceusingConfiguration\pom.xml.
+2023-04-30 15:26:05,022 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:05,026 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:26:05,031 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:05,034 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\interfaceusingConfiguration\src\test\resources
+2023-04-30 15:26:05,245 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adaa.app:o3Springapp:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\o3Springapp\pom.xml.
+2023-04-30 15:26:05,635 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:05,639 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:26:05,643 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:05,646 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\o3Springapp\src\test\resources
+2023-04-30 15:26:05,825 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:qualifierAnnotationwithAutowiring:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\qualifierAnnotationwithAutowiring\pom.xml.
+2023-04-30 15:26:06,165 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:06,169 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:26:06,175 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:06,179 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\qualifierAnnotationwithAutowiring\src\test\resources
+2023-04-30 15:26:06,655 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.spring.core1:springfirst:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springfirst\pom.xml.
+2023-04-30 15:26:06,720 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:06,728 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springfirst\src\main\resources
+2023-04-30 15:26:06,734 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:06,738 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springfirst\src\test\resources
+2023-04-30 15:26:06,882 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:springyoutubefirst:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springyoutubefirst\pom.xml.
+2023-04-30 15:26:07,370 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:07,374 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2023-04-30 15:26:07,475 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:07,479 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springyoutubefirst\src\test\resources
+2023-04-30 15:26:07,926 [Worker-25: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:xmlConfiguration:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\xmlConfiguration\pom.xml.
+2023-04-30 15:26:08,269 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:08,272 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:26:08,277 [Worker-25: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:26:08,280 [Worker-25: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\xmlConfiguration\src\test\resources
+2023-04-30 15:28:27,081 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-30 15:28:30,351 [Worker-7: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/04SpringLifeCycle: com.dollop.app:04SpringLifeCycle:1.0 with classifier  to /04SpringLifeCycle/target/classes
+2023-04-30 15:38:30,975 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-30 15:41:31,706 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:41:31,709 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\SPRINGTAS_COUNTConstructor_method_field_inners_INAClass\src\main\resources
+2023-04-30 15:41:31,712 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:41:31,714 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\SPRINGTAS_COUNTConstructor_method_field_inners_INAClass\src\test\resources
+2023-04-30 15:42:04,789 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:42:05,114 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app.bean:SPRINGTAS_COUNTConstructor_method_field_inners_INAClass:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\SPRINGTAS_COUNTConstructor_method_field_inners_INAClass\pom.xml.
+2023-04-30 15:42:05,230 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SPRINGTAS_COUNTConstructor_method_field_inners_INAClass/src/main/java
+2023-04-30 15:42:05,230 [Worker-6: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SPRINGTAS_COUNTConstructor_method_field_inners_INAClass/src/test/java
+2023-04-30 15:42:05,388 [Worker-6: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:42:05,568 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:42:05,569 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\SPRINGTAS_COUNTConstructor_method_field_inners_INAClass\src\main\resources
+2023-04-30 15:42:05,572 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:42:05,574 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\SPRINGTAS_COUNTConstructor_method_field_inners_INAClass\src\test\resources
+2023-04-30 15:42:31,160 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:42:31,217 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.spring.core1:springfirst:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springfirst\pom.xml.
+2023-04-30 15:42:31,240 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /springfirst/src/main/java
+2023-04-30 15:42:31,240 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /springfirst/src/test/java
+2023-04-30 15:42:31,336 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:42:31,466 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:42:31,468 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springfirst\src\main\resources
+2023-04-30 15:42:31,470 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:42:31,471 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springfirst\src\test\resources
+2023-04-30 15:44:19,019 [Worker-1: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:44:19,088 [Worker-1: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:StandAloneCollectionproject:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\StandAloneCollectionproject\pom.xml.
+2023-04-30 15:44:19,173 [Worker-1: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /StandAloneCollectionproject/src/main/java
+2023-04-30 15:44:19,173 [Worker-1: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /StandAloneCollectionproject/src/main/resources
+2023-04-30 15:44:19,173 [Worker-1: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /StandAloneCollectionproject/src/test/java
+2023-04-30 15:44:19,282 [Worker-1: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:44:19,519 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:44:19,546 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:44:19,563 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:44:19,564 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\StandAloneCollectionproject\src\test\resources
+2023-04-30 15:45:23,775 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:45:23,846 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adaa.app:o3Springapp:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\o3Springapp\pom.xml.
+2023-04-30 15:45:23,923 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /o3Springapp/src/main/java
+2023-04-30 15:45:23,924 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /o3Springapp/src/main/resources
+2023-04-30 15:45:23,924 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /o3Springapp/src/test/java
+2023-04-30 15:45:24,013 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:45:24,150 [Worker-12: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:45:24,152 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:45:24,157 [Worker-12: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:45:24,158 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\o3Springapp\src\test\resources
+2023-04-30 15:45:54,855 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:45:54,900 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:springyoutubefirst:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springyoutubefirst\pom.xml.
+2023-04-30 15:45:54,974 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /springyoutubefirst/src/main/java
+2023-04-30 15:45:54,974 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /springyoutubefirst/src/main/resources
+2023-04-30 15:45:54,974 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /springyoutubefirst/src/test/java
+2023-04-30 15:45:55,069 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:45:55,314 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:45:55,316 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2023-04-30 15:45:55,325 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:45:55,327 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\springyoutubefirst\src\test\resources
+2023-04-30 15:46:06,054 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:46:06,103 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:qualifierAnnotationwithAutowiring:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\qualifierAnnotationwithAutowiring\pom.xml.
+2023-04-30 15:46:06,177 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /qualifierAnnotationwithAutowiring/src/main/java
+2023-04-30 15:46:06,178 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /qualifierAnnotationwithAutowiring/src/main/resources
+2023-04-30 15:46:06,178 [Worker-11: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /qualifierAnnotationwithAutowiring/src/test/java
+2023-04-30 15:46:06,268 [Worker-11: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:46:06,413 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:46:06,414 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:46:06,419 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:46:06,420 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\qualifierAnnotationwithAutowiring\src\test\resources
+2023-04-30 15:46:44,651 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:46:44,700 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:xmlConfiguration:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\xmlConfiguration\pom.xml.
+2023-04-30 15:46:44,776 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /xmlConfiguration/src/main/java
+2023-04-30 15:46:44,776 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /xmlConfiguration/src/main/resources
+2023-04-30 15:46:44,776 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /xmlConfiguration/src/test/java
+2023-04-30 15:46:44,868 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:46:45,005 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:46:45,007 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:46:45,032 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:46:45,033 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\xmlConfiguration\src\test\resources
+2023-04-30 15:47:26,656 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:47:26,705 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:interfaceusingConfiguration:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\interfaceusingConfiguration\pom.xml.
+2023-04-30 15:47:26,779 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /interfaceusingConfiguration/src/main/java
+2023-04-30 15:47:26,780 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /interfaceusingConfiguration/src/main/resources
+2023-04-30 15:47:26,780 [Worker-12: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /interfaceusingConfiguration/src/test/java
+2023-04-30 15:47:26,875 [Worker-12: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:47:27,009 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:47:27,010 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:47:27,036 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:47:27,037 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\interfaceusingConfiguration\src\test\resources
+2023-04-30 15:47:38,555 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:47:38,608 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:InteraceAssignmentSpringCore:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\InteraceAssignmentSpringCore\pom.xml.
+2023-04-30 15:47:38,623 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/04SpringLifeCycle: com.dollop.app:04SpringLifeCycle:1.0 with classifier  to /04SpringLifeCycle/target/classes
+2023-04-30 15:47:38,692 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /InteraceAssignmentSpringCore/src/main/java
+2023-04-30 15:47:38,693 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /InteraceAssignmentSpringCore/src/test/java
+2023-04-30 15:47:38,801 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:47:38,918 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:47:38,919 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\InteraceAssignmentSpringCore\src\main\resources
+2023-04-30 15:47:38,920 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:47:38,921 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\InteraceAssignmentSpringCore\src\test\resources
+2023-04-30 15:47:48,022 [Worker-7: Launching FormatTest] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/04SpringLifeCycle: com.dollop.app:04SpringLifeCycle:1.0 with classifier null to /04SpringLifeCycle/target/classes
+2023-04-30 15:47:48,036 [Worker-7: Launching FormatTest] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/04SpringLifeCycle: com.dollop.app:04SpringLifeCycle:1.0 with classifier null to /04SpringLifeCycle/target/classes
+2023-04-30 15:47:48,044 [Worker-7: Launching FormatTest] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/04SpringLifeCycle: com.dollop.app:04SpringLifeCycle:1.0 with classifier null to /04SpringLifeCycle/target/classes
+2023-04-30 15:48:09,372 [Worker-2: Launching FormatTest] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/04SpringLifeCycle: com.dollop.app:04SpringLifeCycle:1.0 with classifier null to /04SpringLifeCycle/target/classes
+2023-04-30 15:48:09,385 [Worker-2: Launching FormatTest] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/04SpringLifeCycle: com.dollop.app:04SpringLifeCycle:1.0 with classifier null to /04SpringLifeCycle/target/classes
+2023-04-30 15:48:09,398 [Worker-2: Launching FormatTest] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/04SpringLifeCycle: com.dollop.app:04SpringLifeCycle:1.0 with classifier null to /04SpringLifeCycle/target/classes
+2023-04-30 15:48:35,104 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:48:35,154 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.dollo1.app:07SpringjavaConfig:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\07SpringjavaConfig\pom.xml.
+2023-04-30 15:48:35,224 [Worker-10: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /07SpringjavaConfig/src/main/java
+2023-04-30 15:48:35,224 [Worker-10: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /07SpringjavaConfig/src/main/resources
+2023-04-30 15:48:35,224 [Worker-10: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /07SpringjavaConfig/src/test/java
+2023-04-30 15:48:35,303 [Worker-10: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:48:35,464 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:48:35,466 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:48:35,474 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:48:35,475 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\07SpringjavaConfig\src\test\resources
+2023-04-30 15:48:51,821 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:48:51,878 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app.AnnotationConfiuration:AnnotationConfiguration:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AnnotationConfiguration\pom.xml.
+2023-04-30 15:48:51,951 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AnnotationConfiguration/src/main/java
+2023-04-30 15:48:51,951 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /AnnotationConfiguration/src/main/resources
+2023-04-30 15:48:51,951 [Worker-5: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AnnotationConfiguration/src/test/java
+2023-04-30 15:48:52,047 [Worker-5: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:48:52,177 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:48:52,178 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:48:52,190 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:48:52,191 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AnnotationConfiguration\src\test\resources
+2023-04-30 15:50:36,445 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:50:36,575 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dollop.app:03springapp:0.0.1-SNAPSHOT @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\03springapp\pom.xml.
+2023-04-30 15:50:36,620 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dollop.app:04SpringLifeCycle:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\04SpringLifeCycle\pom.xml.
+2023-04-30 15:50:36,657 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dollop.app:05SpringLifeCycle:0.0.1-SNAPSHOT @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\05SpringLifeCycle\pom.xml.
+2023-04-30 15:50:36,689 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:09SpringLifeCycle:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\09SpringLifeCycle\pom.xml.
+2023-04-30 15:50:36,720 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:AutowiringUsingXml:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowiringUsingXml\pom.xml.
+2023-04-30 15:50:36,752 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:AutowirweAnnotationforAutowiring:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowirweAnnotationforAutowiring\pom.xml.
+2023-04-30 15:50:36,780 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: xmlConfiuration:com.adda.app:1.0 @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\com.adda.app\pom.xml.
+2023-04-30 15:50:36,937 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /03springapp/src/main/java
+2023-04-30 15:50:36,938 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /03springapp/src/test/java
+2023-04-30 15:50:36,971 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /04SpringLifeCycle/src/main/java
+2023-04-30 15:50:36,971 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /04SpringLifeCycle/src/main/resources
+2023-04-30 15:50:36,971 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /04SpringLifeCycle/src/test/java
+2023-04-30 15:50:37,016 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /05SpringLifeCycle/src/main/java
+2023-04-30 15:50:37,016 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /05SpringLifeCycle/src/main/resources
+2023-04-30 15:50:37,016 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /05SpringLifeCycle/src/test/java
+2023-04-30 15:50:37,068 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /09SpringLifeCycle/src/main/java
+2023-04-30 15:50:37,069 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /09SpringLifeCycle/src/main/resources
+2023-04-30 15:50:37,069 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /09SpringLifeCycle/src/test/java
+2023-04-30 15:50:37,117 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AutowiringUsingXml/src/main/java
+2023-04-30 15:50:37,117 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /AutowiringUsingXml/src/main/resources
+2023-04-30 15:50:37,117 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AutowiringUsingXml/src/test/java
+2023-04-30 15:50:37,166 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AutowirweAnnotationforAutowiring/src/main/java
+2023-04-30 15:50:37,166 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /AutowirweAnnotationforAutowiring/src/test/java
+2023-04-30 15:50:37,208 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /com.adda.app/src/main/java
+2023-04-30 15:50:37,209 [Worker-2: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /com.adda.app/src/test/java
+2023-04-30 15:50:37,626 [Worker-2: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 7 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:50:37,746 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:37,747 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\03springapp\src\main\resources
+2023-04-30 15:50:37,750 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:37,750 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\03springapp\src\test\resources
+2023-04-30 15:50:37,790 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:37,791 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:50:37,796 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:37,797 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\04SpringLifeCycle\src\test\resources
+2023-04-30 15:50:37,843 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:37,844 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:50:37,853 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:37,854 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\05SpringLifeCycle\src\test\resources
+2023-04-30 15:50:37,922 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:37,923 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:50:37,934 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:37,935 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\09SpringLifeCycle\src\test\resources
+2023-04-30 15:50:37,988 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:37,989 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:50:38,002 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:38,003 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowiringUsingXml\src\test\resources
+2023-04-30 15:50:38,063 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:38,064 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowirweAnnotationforAutowiring\src\main\resources
+2023-04-30 15:50:38,065 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:38,067 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowirweAnnotationforAutowiring\src\test\resources
+2023-04-30 15:50:38,147 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:38,149 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\com.adda.app\src\main\resources
+2023-04-30 15:50:38,150 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:50:38,151 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\com.adda.app\src\test\resources
+2023-04-30 15:51:24,905 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:51:24,934 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:51:24,936 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:51:24,937 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowiringUsingXml\src\test\resources
+2023-04-30 15:51:33,580 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:51:33,581 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:51:33,582 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:51:33,583 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\AutowiringUsingXml\src\test\resources
+2023-04-30 15:52:39,035 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-30 15:52:39,078 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.dollop.app:05SpringLifeCycle:0.0.1-SNAPSHOT @ C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\05SpringLifeCycle\pom.xml.
+2023-04-30 15:52:39,142 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /05SpringLifeCycle/src/main/java
+2023-04-30 15:52:39,142 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /05SpringLifeCycle/src/main/resources
+2023-04-30 15:52:39,142 [Worker-8: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /05SpringLifeCycle/src/test/java
+2023-04-30 15:52:39,210 [Worker-8: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-30 15:52:39,426 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:52:39,427 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:52:39,432 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:52:39,433 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\05SpringLifeCycle\src\test\resources
+2023-04-30 15:53:21,627 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:53:21,629 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:53:21,631 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:53:21,632 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\05SpringLifeCycle\src\test\resources
+2023-04-30 15:53:31,418 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:53:31,419 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-04-30 15:53:31,421 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-04-30 15:53:31,421 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\jdbc+springcore\05SpringLifeCycle\src\test\resources
+2023-04-30 17:18:12,490 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-30 17:20:11,004 [Worker-5: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:4propertyfile:0.0.1-SNAPSHOT @ C:\Users\Kdpat\OneDrive\Desktop\springboot\4propertyfile\pom.xml.
+2023-04-30 17:20:11,005 [Worker-9: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:EmailTask-2:0.0.1-SNAPSHOT @ C:\Users\Kdpat\OneDrive\Desktop\springboot\EmailTask-2\pom.xml.
+2023-04-30 17:20:18,006 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-30 17:20:18,006 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-04-30 17:20:18,013 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2023-04-30 17:20:18,103 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-04-30 17:20:18,110 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-04-30 17:20:18,110 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-04-30 17:20:18,110 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\springboot\4propertyfile\src\test\resources
+2023-05-01 10:26:22,388 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-01 10:26:38,635 [Worker-2: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.adda.app:4usingymlfile:0.0.1-SNAPSHOT @ C:\Users\Kdpat\OneDrive\Desktop\springboot\4usingymlfile\pom.xml.
+2023-05-01 10:26:45,299 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-05-01 10:26:45,299 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-05-01 10:26:45,302 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-05-01 10:26:45,319 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-05-01 10:26:45,322 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-05-01 10:26:45,323 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-05-01 10:26:45,323 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Kdpat\OneDrive\Desktop\springboot\4usingymlfile\src\test\resources

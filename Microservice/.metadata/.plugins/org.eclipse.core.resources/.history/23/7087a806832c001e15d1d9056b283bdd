@@ -1,0 +1,33 @@
+package com.adda.app.producer;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.kafka.support.KafkaHeaders;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
+import org.springframework.stereotype.Service;
+
+import com.adda.app.PayLoad.User;
+
+@Service
+public class jsonKafkaProducer {
+
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(jsonKafkaProducer.class);
+	
+	private KafkaTemplate<String, User> kafkaTemplate;
+
+	public jsonKafkaProducer(KafkaTemplate<String, User> kafkaTemplate) {
+		super();
+		this.kafkaTemplate = kafkaTemplate;
+	}
+	
+	public void sendmsg(User data)
+	{
+		LOGGER.info(String.format("Msg sent->  %s", data.toString()));
+		Message<User> message=MessageBuilder.withPayload(data).setHeader(KafkaHeaders.TOPIC, "javaguides_json").build();
+
+		kafkaTemplate.send(message);
+	}
+}

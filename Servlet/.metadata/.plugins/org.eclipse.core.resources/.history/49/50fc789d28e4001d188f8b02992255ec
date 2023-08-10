@@ -1,0 +1,22 @@
+package com.adda.app.dao.impl;
+
+import java.util.List;
+
+import com.adda.app.Bean.User;
+import com.adda.app.dao.IuserInterface;
+
+public class IUserInterfaceimpl implements IuserInterface {
+ private final static String INSERT_USER="INSERT into User values(?,?,?,?)";
+	@Override
+	public Boolean creat(User user) {
+		
+		return null;
+	}
+
+	@Override
+	public List<User> view() {
+		
+		return null;
+	}
+
+}

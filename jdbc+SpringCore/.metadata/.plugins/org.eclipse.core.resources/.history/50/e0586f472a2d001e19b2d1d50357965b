@@ -1,0 +1,11 @@
+package com.adda.app.util;
+
+public class DbConnection {
+	
+	private static final String DB_URL="jdbc:mysql://localhost:3306/HumanDb";
+	private static final String DB_UNAME="root";
+	private static final String DB_PASS="PASSWORD123";
+	
+	
+
+}

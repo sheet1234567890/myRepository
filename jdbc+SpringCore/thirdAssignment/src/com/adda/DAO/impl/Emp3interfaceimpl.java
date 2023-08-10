@@ -1,0 +1,79 @@
+package com.adda.DAO.impl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Types;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.adda.DAO3.Emp3interface;
+import com.adda.app.util.DbConnection;
+import com.adda.bean3.Emp3;
+import java.sql.CallableStatement;
+
+public class Emp3interfaceimpl implements Emp3interface {
+ private final static String EMPLOYEE_FILTER="SELECT*FROM employee where 1=1";
+ private final static String EMPLOYEE_LIST="Call getEmployeeById(?)";
+	@Override
+	public List<Emp3> Empfilter(String e_name,String e_email_,String e_location) throws SQLException {
+		// TODO Auto-generated method stub
+		List <Emp3> lists=new ArrayList();
+		StringBuilder sql = new StringBuilder(EMPLOYEE_FILTER);
+		if(e_name!=null&&!e_name.equals("null"))
+		sql.append(" AND e_name=? ");
+		if(e_email_!=null&&!e_email_.equals("null"))
+		sql.append(" AND e_email=? ");
+		if(e_location!=null&&!e_location.equals("null"))
+		sql.append(" AND e_location=? ");
+		//System.out.println(sql);
+		Connection con = DbConnection.Db_Connection();
+		PreparedStatement pstmt = con.prepareStatement(sql.toString());
+		int index=1;
+		if(e_name!=null&&!e_name.equals("null"))
+		pstmt.setString(index++, e_name);
+		if(e_email_!=null&&!e_email_.equals("null"))
+		pstmt.setString(index++, e_email_);
+		if(e_location!=null&&!e_location.equals("null"))
+		pstmt.setString(index++, e_location);
+		ResultSet rs = pstmt.executeQuery();
+		while(rs.next()) 
+		{
+			Emp3 e =new Emp3();
+			e.setE_id(rs.getInt(1));
+			e.setDepartment_id(rs.getInt(2));
+			e.setE_name(rs.getString(3));
+			e.setE_email(rs.getString(3));
+			e.setE_location(rs.getString(4));
+			lists.add(e);
+		}
+	
+		return  lists;
+	}
+	@Override
+	public List<Emp3> Empprocedure(Integer id) throws SQLException  {
+		// TODO Auto-generated method stub
+		List <Emp3> lists=new ArrayList();
+		Connection con = DbConnection.Db_Connection();
+		CallableStatement csmt= con.prepareCall(EMPLOYEE_LIST);
+		csmt.setInt(1,id);
+		//csmt.registerOutParameter(1,Types.VARCHAR);
+		ResultSet rs=csmt.executeQuery();
+		while(rs.next()) {
+			Emp3 e = new Emp3();
+			e.setE_id(rs.getInt(1));
+			e.setDepartment_id(rs.getInt(2));
+			e.setE_name(rs.getString(3));
+			e.setE_email(rs.getString(3));
+			e.setE_location(rs.getString(4));
+			lists.add(e);
+		}
+		
+		return lists;
+	}
+
+	
+
+	}
+

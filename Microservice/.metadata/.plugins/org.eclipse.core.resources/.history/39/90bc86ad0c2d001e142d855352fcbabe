@@ -1,0 +1,16 @@
+spring.kafka.consumer.bootstrap-servers=localhost:9092
+spring.kafka.consumer.group-id=mygroup
+spring.kafka.consumer.auto-offset-reset=earliest
+spring.kafka.consumer.key-dserializer=org.apache.kafka.comman.serialization-StringDeserializer
+#spring.kafka.consumer.value-dserializer=org.apache.kafka.comman.serialization-StringDeserializer
+spring.kafka.consumer.value-dserializer=org.springframework.kafka.support.serializer.JsonDeserializer
+spring.kafka.consumer.properties.json.trusted.package=*
+
+
+
+spring.kafka.producer.bootstrap-servers=localhost:9092 
+#key serializer
+spring.kafka.producer.key-serializer=org.apache.kafka.common.serialization.StringSerializer
+#value serializer
+#spring.kafka.producer.value-serializer=org.apache.kafka.common.serialization.StringSerializer 
+spring.kafka.consumer.value-serializer=org.springframework.kafka.support.serializer.Jsonserializer

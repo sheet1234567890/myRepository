@@ -1,0 +1,16 @@
+<html <xmlns:th="https://www.thymeleaf.org/">
+<head>
+<title>WEB APP</title>
+<link rel="stylesheet" th:href="@{/mycss/design.css}">
+<script type="text/javascript" th:src="@{myjs/setup.js}"></script>
+</head>
+<body>
+<img th:src="@{/images/conadd.jpg}" width="100" height="150"/>
+  <h2>Welcome to spring boot +Thmeleaf Example</h2>
+  <p class="mydesign">SAMPLE CSS</p>
+  <p>This is Product code 
+  <span th:text="${prodCode}"></span>
+  </p>
+  <p>This os Product Code [[${prodCode}]]</p>
+</body>
+</html>

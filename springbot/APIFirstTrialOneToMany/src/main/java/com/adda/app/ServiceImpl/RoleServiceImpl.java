@@ -1,0 +1,57 @@
+package com.adda.app.ServiceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.adda.app.Bean.Role;
+import com.adda.app.Service.RoleService;
+import com.adda.app.raposatary.Rolerepo;
+import com.adda.app.raposatary.UserRepo;
+@Service
+public class RoleServiceImpl implements RoleService {
+
+	@Autowired
+	private Rolerepo repo;
+	
+	@Override
+	public Role createrole(Role role) {
+		
+		return repo.save(role);
+	}
+
+	@Override
+	public String deleteRole(Integer id) {
+		if(repo.existsById(id)) 
+		{
+			repo.deleteById(id);
+			return "delete succssfully";
+		}
+	return "not found role";	
+	}
+
+	@Override
+	public String updateRole(Role role) {
+		if(repo.existsById(role.getRid()))
+		{
+			repo.save(role);
+			return "update successfull";
+		}
+		return "Not Found Role";
+	}
+
+	@Override
+	public List<Role> viewAll() {
+		List<Role>roleList = this.repo.findAll();
+		return roleList;
+	}
+
+	@Override
+	public String deleteAll() {
+		this.repo.deleteAll();
+		return "deleted";
+		
+	}
+
+}

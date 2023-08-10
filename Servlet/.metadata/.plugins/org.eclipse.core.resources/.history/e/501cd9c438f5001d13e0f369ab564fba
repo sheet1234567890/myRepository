@@ -1,0 +1,352 @@
+package com.adda.app.Controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.adda.app.Bean.Admin;
+import com.adda.app.Bean.Contect;
+import com.adda.app.Bean.Group;
+import com.adda.app.Bean.User;
+import com.adda.app.DAO.IAdminInterFace;
+import com.adda.app.DAO.IContectInterface;
+import com.adda.app.DAO.IGroupInterface;
+import com.adda.app.DAO.IUserInterface;
+import com.adda.app.DAO.impl.GroupInterfaceImpl;
+import com.adda.app.DAO.impl.IAdminInterfaceImpl;
+import com.adda.app.DAO.impl.IContectInterfaceImpl;
+import com.adda.app.DAO.impl.UserInterfaceimpl;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class PhoneBookController
+ */
+public class PhoneBookController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    private IUserInterface i = new UserInterfaceimpl();
+    private IContectInterface i1 = new IContectInterfaceImpl();
+    private IAdminInterFace i2 = new IAdminInterfaceImpl();
+    private IGroupInterface i3 = new GroupInterfaceImpl();
+    private User u=null;
+    private Contect c=null;
+    private Admin a=null;
+    private Group g=null;
+    private List<Contect>conlist=null;
+    private List<User>userlist=null;
+    private List<Group>grouplist=null;
+    private RequestDispatcher rd=null;
+    private HttpSession session;
+    /**
+     * Default constructor. 
+     */
+    public PhoneBookController() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String action = request.getParameter("Action");
+		//System.out.println(action);
+		switch(action) 
+		{
+		case "ADDUSER":
+			u=new User();
+			u.setuName(request.getParameter("Name"));
+			u.setuEmail(request.getParameter("Email"));
+			u.setuAddress(request.getParameter("Address"));
+			u.setuMobile(request.getParameter("Mobile"));
+			u.setuPassword(request.getParameter("Password"));
+			u.setuRole(request.getParameter("Role"));
+			try {
+				i.save(u);
+				System.out.println("Contect Add SuccessFull.....!");
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();	
+			}
+			 rd = request.getRequestDispatcher("./index.jsp");
+             rd.forward(request, response);
+			break;
+		case"LOGIN":
+			u=new User();
+			
+			String email=request.getParameter("Email");
+			String pass=request.getParameter("Password");
+			u=i.LoginUser(email,pass);
+			System.out.println(email+"  "+pass);
+			System.out.println(u);
+			if(u.getuId()!=null) 
+			{
+              if(u.getuRole().equals("user")) 
+              {
+            	  session = request.getSession();
+            	  System.out.println("hello");
+    			  session.setAttribute("uId", u.getuId());
+    			  grouplist = (List<Group>) i3.viewAllGroup(((Integer)session.getAttribute("uId")));
+            	  request.setAttribute("user", u);
+            	  request.setAttribute("glist", grouplist);
+            	  rd = request.getRequestDispatcher("./UserDesboard.jsp");
+                  rd.forward(request, response);
+              }
+              else 
+              {
+            	  Integer count =0;
+            	  session = request.getSession();
+            	  session.setAttribute("uId",u.getuId());
+            	  count=i2.countUser();
+            	  request.setAttribute("count", count);
+            	  grouplist = (List<Group>) i3.viewAllGroup(((Integer)session.getAttribute("uId")));
+            	  request.setAttribute("user", u);
+            	  request.setAttribute("glist", grouplist);
+            	  rd = request.getRequestDispatcher("./UserDesboard.jsp");
+                  rd.forward(request, response);  
+              }
+              
+			}
+			else
+			{
+				System.out.println("..........");
+	              rd = request.getRequestDispatcher("./index.jsp");
+	              rd.forward(request, response);
+			}
+		    break;		
+		case"LOGOUT":
+			System.out.println("LOGOUT..........");
+			session.invalidate();
+			rd=request.getRequestDispatcher("./index.jsp");
+			rd.forward(request, response);
+			break;
+			
+		case "UPDATEPROFILE":
+			u=new User();
+			u.setuId((Integer)session.getAttribute("uId"));
+			u.setuName(request.getParameter("Name"));
+			System.out.println(u.getuName());
+			u.setuEmail(request.getParameter("Email"));
+			u.setuAddress(request.getParameter("Address"));
+			u.setuMobile(request.getParameter("Mobile"));
+			try {
+				i.save(u);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			 grouplist = (List<Group>) i3.viewAllGroup(((Integer)session.getAttribute("uId")));
+			 u=i.updateById((Integer)session.getAttribute("uId"));
+			 request.setAttribute("glist", grouplist);
+			 request.setAttribute("user", u);
+       	     rd = request.getRequestDispatcher("./UserDesboard.jsp");
+             rd.forward(request, response);
+             break;
+		case "GETUSER":
+			 u = new User();
+			 u=i.updateById((Integer)session.getAttribute("uId"));
+			 request.setAttribute("user", u);
+			 System.out.println(u);
+       	     rd = request.getRequestDispatcher("./pages/login/profile.jsp");
+             rd.forward(request, response);
+             break;
+		case "TOCREATCONTECT":
+			u=new User();
+			u=i.updateById((Integer)session.getAttribute("uId"));
+			request.setAttribute("user", u);
+			rd=request.getRequestDispatcher("./pages/ui-features/creatapp.jsp");
+			rd.forward(request, response);
+			break;
+		case "ADDCONTECT":
+			c=new Contect();
+			u=new User();
+			c.setcName(request.getParameter("Name"));
+			c.setcEmail(request.getParameter("Email"));
+			c.setcMobile(request.getParameter("Phone"));
+			c.setcAddress(request.getParameter("Address"));
+			c.setcIsfav(false);
+			c.setCuId((Integer)session.getAttribute("uId"));
+			i1.save(c);
+			System.out.println("Add 1 Contect"+c);
+			grouplist = (List<Group>) i3.viewAllGroup(((Integer)session.getAttribute("uId")));
+			 request.setAttribute("glist", grouplist);
+			u=i.updateById((Integer)session.getAttribute("uId"));
+			 request.setAttribute("user", u);
+       	     rd = request.getRequestDispatcher("./UserDesboard.jsp");
+             rd.forward(request, response);
+			break;
+		case"TOVIEWUSER":
+			viewUser(request,response);
+			break;
+		case "TOVIEWCONTECT":
+			viewContect(request,response);
+			break;
+		case "GROUPCONTECTVIEW":
+			 viewGroupContect(request,response);
+			 break;
+		case "TOEDITCONTECT"	:
+			System.out.println("sheetal");
+			System.out.println(request.getParameter("cid"));
+			 c = i1.updateContectById(Integer.parseInt(request.getParameter("cid")));
+			 u = new User();
+			 u=i.updateById((Integer)(session.getAttribute("uId")));
+			 System.out.println(u);
+			 request.setAttribute("user", u);
+			 request.setAttribute("contect",c );
+			 rd=request.getRequestDispatcher("./pages/ui-features/editContact.jsp");
+			 rd.forward(request, response);
+			 break;
+		case "EDITCONTECT":
+			c.setcId(Integer.parseInt(request.getParameter("conId")));
+			c.setcName(request.getParameter("name"));
+			c.setcEmail(request.getParameter("email"));
+			c.setcMobile(request.getParameter("mobaile"));
+			c.setcAddress(request.getParameter("address"));
+			System.out.println(c);
+			i1.save(c);
+			System.out.println(".............");
+			viewContect(request,response);
+			 break;
+		case "DELETECONTECT":
+			 Contect Deletecon=null;
+			 System.out.println((Integer.parseInt(request.getParameter("cid"))));
+			 System.out.println(i1.deleteContectById(Integer.parseInt(request.getParameter("cid"))));
+			 viewContect(request,response);
+			 break;
+		case "DELETEUSER":
+			 User deleteuser;
+			 System.out.println((Integer)session.getAttribute("uId"));
+			 System.out.println(i.deleteById((Integer)session.getAttribute("uId")));
+			 userToDesktop(request,response);
+			break;
+		case "CHANGEPASSWORD":
+			  String oldpass=request.getParameter("oldpassword");
+			  String newpass=request.getParameter("newpassword");
+			  System.out.println(oldpass+"  "+newpass);
+			  i.changPassword(oldpass, newpass, (Integer)session.getAttribute("uId"));
+			  userToDesktop(request,response);
+			  break;
+			  
+		case "CONTECTFAVORAITE":
+			  Boolean isfav=Boolean.parseBoolean(request.getParameter("conisfav"));
+			  if(isfav) 
+			  {
+				  isfav = false;
+			  }
+			  else 
+			  {
+				  isfav=true;
+			  }
+			  i1.isContactFav(Integer.parseInt(request.getParameter("cid")), isfav);
+			  //viewGroup(request,response);
+			  viewContect(request,response);
+				 break;
+				 
+		case "TOCREATEGROUP":
+			 u= new User();
+			 u=i.updateById((Integer)session.getAttribute("uId")); 
+			 request.setAttribute("user", u);
+       	     rd = request.getRequestDispatcher("./pages/ui-features/createcase.jsp");
+             rd.forward(request, response); 
+             break;
+		case "ADDGROUP":
+			 g= new Group();
+			 String name= request.getParameter("gname");
+			
+			 Integer f=0;
+			 grouplist = (List<Group>) i3.viewAllGroup(((Integer)session.getAttribute("uId")));
+			 for(int i=0;i<grouplist.size();i++) 
+			 {
+				//if(grouplist.get(i).getgName().equals(name)) 
+					System.out.println(grouplist.get(i).getgName());
+					//f=1;
+			
+			 }
+				/*
+				 * if(true) { g.setgName(name); g.setUid((Integer)session.getAttribute("uId"));
+				 * g.setgIsfav(false);
+				 * 
+				 * // i3.save(g);
+				 * 
+				 * u= new User(); u=i.updateById((Integer)session.getAttribute("uId"));
+				 * System.out.println(grouplist); request.setAttribute("glist", grouplist);
+				 * session.setAttribute("uId",u.getuId()); request.setAttribute("user", u); rd =
+				 * request.getRequestDispatcher("./UserDesboard.jsp"); rd.forward(request,
+				 * response); }
+				 */
+			 break;
+		case "GETGROUP":
+			 viewGroupContect(request,response);
+			  break;
+			  		
+			default:
+	    	break;
+			 
+		}     	
+}
+	private void viewGroupContect(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		u=new User();
+		g= new Group();
+		System.out.println((Integer)session.getAttribute("uId")+"  ****  "+Integer.parseInt(request.getParameter("gid")));
+		conlist = i3.GlistContect((Integer)session.getAttribute("uId"),Integer.parseInt(request.getParameter("gid")) );
+		u=i.updateById((Integer)session.getAttribute("uId"));
+		request.setAttribute("user", u);
+		request.setAttribute("conlist", conlist);
+		rd = request.getRequestDispatcher("./pages/ui-features/viewplan.jsp");
+        rd.forward(request, response);
+		
+	}
+
+	private void viewUser(HttpServletRequest request, HttpServletResponse response) {
+		
+		
+	}
+	
+	private void viewGroup(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException 
+	{
+		u=new User();
+		g=new Group();
+		grouplist = i3.viewAllGroup((Integer)session.getAttribute("uId"));
+		u=i.updateById((Integer)session.getAttribute("uId"));
+		request.setAttribute("glist", grouplist);
+		request.setAttribute("user", u);
+		rd = request.getRequestDispatcher("./pages/ui-features/viewplan.jsp");
+        rd.forward(request, response);
+	}
+
+	 
+	private void viewContect(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		u = new User();
+		conlist=i1.viewAllContect((Integer)session.getAttribute("uId"));
+		u=i.updateById((Integer)session.getAttribute("uId"));
+		request.setAttribute("user", u);
+		request.setAttribute("conlist", conlist);
+		System.out.println("viewAllContect");
+		rd=request.getRequestDispatcher("./pages/ui-features/viewapp.jsp");
+		rd.forward(request, response);
+		
+	}
+	private void userToDesktop(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException 
+	{
+		u=new User();
+		u=i.updateById((Integer)session.getAttribute("uId"));
+		request.setAttribute("user", u);
+		grouplist = i3.viewAllGroup((Integer)session.getAttribute("uId"));
+		request.setAttribute("glist", grouplist);
+		rd=request.getRequestDispatcher("./UserDesboard.jsp");
+		rd.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

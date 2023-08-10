@@ -1,0 +1,6 @@
+my:
+  db:
+    s_name: sheetal
+    s_id: 23
+server:
+  port: 9898

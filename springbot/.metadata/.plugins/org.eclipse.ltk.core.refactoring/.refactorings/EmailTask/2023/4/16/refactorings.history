@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;EmailBean.java&apos; to &apos;EmailTask-1/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;EmailTask&apos;&#x0D;&#x0A;- Destination element: &apos;EmailTask-1/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;com.adda.app.EmailBean.java&apos;" description="Copy compilation unit" destination="=EmailTask-1/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/" element1="/src\/main\/java=/gradle_scope=/main=/=/gradle_used_by_scope=/main,test=/&lt;com.adda.app{EmailBean.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1681814726522" units="1" version="1.0"/>
+</session>

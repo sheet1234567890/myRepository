@@ -1,0 +1,78 @@
+package com.adda.app.controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.adda.app.Bean.User;
+import com.adda.app.dao.IuserInterface;
+import com.adda.app.dao.impl.IUserInterfaceimpl;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class UController
+ */
+public class UController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    private IuserInterface u = new IUserInterfaceimpl();
+    /**
+     * Default constructor. 
+     */
+    public UController() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String action = "ADDUSER";
+		switch(action) 
+		{
+		case "ADDUSER":
+			User user = new User();
+			user.setUname(request.getParameter("uname"));
+			user.setUsalary(request.getParameter("usalary"));
+			try {
+				if(u.creat(user)) 
+				{
+					System.out.println("ADD ONE STUDENT");
+				}
+			
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+			
+		case "VIEWUSER":
+			try {
+				List<User>Views = u.view();
+				request.setAttribute("VIEWUSER", Views);
+				RequestDispatcher rd = request.getRequestDispatcher("./viewUser.jsp");
+				rd.forward(request, response);
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		 default:
+			 break;
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

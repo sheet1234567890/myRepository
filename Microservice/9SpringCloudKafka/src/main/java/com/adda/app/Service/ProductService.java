@@ -1,0 +1,25 @@
+package com.adda.app.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Component;
+
+import lombok.extern.slf4j.Slf4j;
+@Component
+@Slf4j
+public class ProductService {
+
+	@Autowired
+	private KafkaTemplate<String, String>kafkatemplet;
+	
+	@Value("${my.topic.name}")
+	private String topic;
+	
+	public void sendMessage(String msg) 
+	{
+		log.info("message At Producer Service",msg);
+		kafkatemplet.send(topic, msg);
+	}
+	
+}

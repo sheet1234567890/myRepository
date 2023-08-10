@@ -1,0 +1,15 @@
+package com.adda.app.Entity;
+
+import java.util.Date;
+
+public class Employee {
+
+	private Integer empid;
+	private String empname;
+	private String empdep;
+	private String empGender;
+	private String worklocation;
+	private String cuurentLocation;
+	private  Date joindate;
+	
+}

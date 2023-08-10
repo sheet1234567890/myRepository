@@ -1,0 +1,12 @@
+package com.adda.app.Entity;
+
+public class Salary {
+
+	
+	private Integer sid;
+	private Integer eid;
+	private Double empbasics;
+	private Double empnetSalary;
+	
+	
+}

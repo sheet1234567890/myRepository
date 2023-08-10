@@ -1,0 +1,22 @@
+package com.adda.app.Dao.impl;
+
+import java.util.List;
+
+import com.adda.app.Bean.User;
+import com.adda.app.Dao.IUserInterface;
+
+public class IUserInterfaceimpl implements IUserInterface {
+
+	@Override
+	public void ragistration(User user) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<User> view() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

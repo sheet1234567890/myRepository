@@ -1,0 +1,62 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css"></link>
+<style>
+#frm
+{
+ width:500px;
+ margin:auto;
+ margin-top:100px;
+}
+marquee
+{
+ margin-top:20px;
+}
+</style>
+</head>
+<body class="container">
+<marquee ><h2 class=text-primary>Ragistration form</h2></marquee>
+ <form action="ragister" method="post" class="form card" id="frm">
+ <h2 class="bg-danger text black card-header">Ragistration form</h2>
+ <table class="table table-hover">
+ <tr>
+ <td>Name</td>
+ <td><input type="text" name="uname" required></td>
+ </tr>
+ <tr>
+ <td>Email</td>
+ <td><input type="text" name="uemail" required></td>
+ </tr>
+ <tr>
+ <td>Contect</td>
+ <td><input type="text" name="ucontect" required></td>
+ </tr>
+ <tr>
+ <td>DOB</td>
+ <td><input type="date" name="dob" required></td>
+ </tr>
+ <tr>
+ <td>City</td>
+ <td><select name="city">
+ <option value="pune">PUNE</option>
+ <option value="jabalpur">JABALPUR</option>
+ <option value="bhopal">BHOPAL</option>
+ <option value="indor">INDOR</option>
+ </select></td>
+ </tr>
+ <tr class="card-footer">
+ <td>
+ <button type="submit" class="btn btn-outline-success">Ragister</button>
+ </td>
+ <td><button type="reset" class="btn btn-outline-success">reset</button></td>
+ </tr> 
+ 
+ </table>
+ </form>
+</body>
+</html>

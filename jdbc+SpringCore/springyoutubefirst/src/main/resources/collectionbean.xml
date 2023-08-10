@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="sheetal"
+	class="com.adda.collections.studentCollection" 
+	
+	>
+	<property name="S_name" value="sheetal"/>
+	<property name="phones">
+		<list>
+			<value>7067576774</value>
+			<value>6267962869</value>
+			<value>9131934577</value>
+			<null/>
+		</list>
+		</property>
+	<property name="Addresses">
+		<set>
+			<value>barwah</value>
+			<value>indor</value>
+			<value>bhopal</value>
+			<null/>
+		</set>
+	</property>	
+	<property name="courses">
+		<map>
+			<entry key="java" value="2month"/>
+			<entry key="python" value="3month"/>
+			
+		</map>
+	</property>
+	</bean>
+	
+	
+</beans>

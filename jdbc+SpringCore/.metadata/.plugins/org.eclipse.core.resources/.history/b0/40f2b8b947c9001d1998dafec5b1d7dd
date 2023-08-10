@@ -1,0 +1,17 @@
+package com.adda.app.DAO.impl;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import com.adda.app.DAO.ITeacherInterface;
+import com.adda.app.util.DbConnection;
+
+public class Teacherimpl implements ITeacherInterface {
+
+	@Override
+	public void InsertRecord(ArrayList l) {
+		Connection con = DbConnection.Db_Connection();
+		
+	}
+     
+}

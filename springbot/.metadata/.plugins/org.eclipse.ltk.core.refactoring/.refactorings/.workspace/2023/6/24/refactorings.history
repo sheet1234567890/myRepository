@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;IMAGE_INSERT_POSTMAN_TO_MYSQL&apos;" deleteContents="false" description="Delete resource &apos;IMAGE_INSERT_POSTMAN_TO_MYSQL&apos;" element1="/IMAGE_INSERT_POSTMAN_TO_MYSQL" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1686637679725"/>
+</session>

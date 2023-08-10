@@ -1,0 +1,296 @@
+package com.adda.app.ServiceImpl;
+
+import java.security.Principal;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import com.adda.app.Entity.Album;
+import com.adda.app.Entity.Comments;
+import com.adda.app.Entity.LoginUser;
+import com.adda.app.Entity.Post;
+import com.adda.app.Entity.Todos;
+import com.adda.app.Entity.User;
+import com.adda.app.Exceptions.CompanyNotFoundException;
+import com.adda.app.Exceptions.DuplicateEntryException;
+import com.adda.app.Exceptions.PostNotFoundException;
+import com.adda.app.Exceptions.UserNotFoundException;
+import com.adda.app.Reposataryy.IRAlbumRepo;
+import com.adda.app.Reposataryy.IRCommentRepo;
+import com.adda.app.Reposataryy.IRCompanyRepo;
+import com.adda.app.Reposataryy.IRPostRepo;
+import com.adda.app.Reposataryy.IRTodoRepo;
+import com.adda.app.Reposataryy.IRUserRepo;
+import com.adda.app.Service.IUserService;
+
+@Service
+public class UserServiceImpl implements IUserService ,UserDetailsService{
+
+	/** User Repository */
+	@Autowired
+	private IRUserRepo urepo;
+	/** Post Repository.. */
+	@Autowired
+	private IRPostRepo prepo;
+	/** Album Repository.. */
+	@Autowired
+	private IRAlbumRepo arepo;
+	/** Comment Repository */
+	@Autowired
+	private IRCommentRepo crepo;
+	/** Todos Repository */
+	@Autowired
+	private IRTodoRepo trepo;
+	/** Company Repo... */
+	@Autowired
+	private IRCompanyRepo comrepo;
+	/**Password Encoder...*/
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
+	
+
+	/** User Registration.... */
+	@Override
+	public User RagisterUser(User user) {
+		Integer eid = urepo.getUidByEmail(user.getEmail());
+		Integer nid = urepo.getUidByUserName(user.getUsername());
+
+		
+		if (user.getCompany().getCompanyid() != comrepo.getCompany(user.getCompany().getCompanyname())) {
+			throw new CompanyNotFoundException("company Not Found");
+		}
+//		else if(!(user.getRole().equals("User")&&user.getRole().equals("Admin"))) 
+//		{
+//			
+//			throw new InvalidRoleException("This Role is Invalid");
+//		} 
+		else if (nid != null) {
+			/** Exception handle Duplicate User UserName */
+			throw new DuplicateEntryException("Duplicate Name......");
+		} else if (eid != null) {
+			/** Exception handle Duplicate User Email */
+			throw new DuplicateEntryException("Duplicate Email.....");
+		}
+
+		else {
+			return urepo.save(user);
+		}
+	}
+
+	/** Login User By UserEmail And UserPassword */
+	@Override
+	public User SignUpUser(String email, String pass) {
+
+		User u = urepo.getUserByEmailAndPass(email, pass);
+		if (u == null) {
+			/** Exception handle User Not Found */
+			throw new UserNotFoundException("User Not Found....");
+		}
+		return u;
+	}
+
+	/** LoginUser By UserEmail And UserPassword by loginForm */
+	@Override
+	public User LoginUser(LoginUser loginuser) {
+		String email = loginuser.getUemail();
+		String pass = loginuser.getUpass();
+		System.out.println(email + "  " + pass);
+		User user = urepo.getUserByEmailAndPass(email, pass);
+
+		if (user == null) {
+			/** Exception handle User Not Found */
+			throw new UserNotFoundException("User Not Found....");
+		}
+		return user;
+
+	}
+
+	/** get User profile By UserName */
+	@Override
+	public User profile(String username) {
+
+		User u = urepo.getUserByUserName(username);
+		if (u == null) {
+			throw new UserNotFoundException("User Profile Not Found");
+		}
+		return u;
+	}
+
+	/** Get post By UserName.. */
+	@Override
+	public Post getPostByUserName(String Name) {
+		Integer id = urepo.getUidByUserName(Name);
+		System.out.println(id);
+		if (id == null) {
+			throw new UserNotFoundException("Something Went Wrong ..May be User Not Available");
+		} else {
+			Optional<Post> plist = prepo.findById(id);
+			if (plist.isPresent()) {
+				return plist.get();
+			} else {
+				throw new UserNotFoundException("This User post not Available.... ");
+			}
+		}
+	}
+
+	/** Get Album By UserName */
+	@Override
+	public Album getAlbumByUserName(String Name) {
+		Integer id = urepo.getUidByUserName(Name);
+		if (id == null) {
+			throw new UserNotFoundException("Somthing Went Wrong..may be User Not Avalaible");
+		} else {
+			Optional<Album> alist = arepo.findById(id);
+			if (alist.isPresent()) {
+				return alist.get();
+			} else {
+				throw new UserNotFoundException("Somthing Went Wrong..may be Album Not Avalaible");
+			}
+
+		}
+
+	}
+
+	/** Check User Name Available or not Available */
+	@Override
+	public String CheakUserName(String Name) {
+		Integer id = urepo.getUidByUserName(Name);
+		if (id == null) {
+			return "This User name Not Avalaible";
+		} else {
+			return "This User name Already Exist";
+		}
+	}
+
+	/** Check User Email Available or not Available */
+	@Override
+	public String CheakUserEmail(String email) {
+		Integer id = urepo.getUidByEmail(email);
+		if (id == null) {
+			return "This  Email Not Exist....";
+		} else {
+			return "This  Email Already Exist...";
+
+		}
+	}
+
+	/** Create Comment By User */
+	@Override
+	public Comments CreateComment(Comments comment,Principal p) {
+
+		
+		User u = urepo.getUserByUserName(p.getName());
+		
+		comment.setUser(u);
+		Integer userid = urepo.getUserbyUserId(comment.getUser().getUid());
+		Integer postid = prepo.getPostByPostId(comment.getPost().getPostId());
+		if (userid == null) {
+			throw new UserNotFoundException("User Not Available");
+		} else if (postid == null) {
+			throw new PostNotFoundException("Post Not Available");
+		} else {
+			return crepo.save(comment);
+		}
+	}
+
+	/** Create Todo By User */
+	@Override
+	public Todos CreateTodos(Todos todos,Principal p) {
+       User u = urepo.getUserByUserName(p.getName());
+       todos.setUser(u);
+		Integer id = urepo.getUserbyUserId(todos.getUser().getUid());
+		if (id != null) {
+			return trepo.save(todos);
+		} else {
+			throw new UserNotFoundException("User Not FOund");
+		}
+	}
+
+	/** Update User By Username */
+
+	@Override
+	public User updateUser(User user, String name) {
+		Integer id = urepo.getUidByUserName(name);
+
+		if (id == null) {
+			throw new UserNotFoundException("user not found");
+		} else {
+
+			if (urepo.getUidByEmail(user.getEmail()) != null) {
+				throw new DuplicateEntryException("Email Already Exists Plz Choose Another email......");
+			} else if (urepo.getUidByUserName(user.getUsername()) != null) {
+				/** Exception handle Duplicate User UserName */
+				throw new DuplicateEntryException("UserName Already Exists Plz Choose Another name......");
+			}
+
+			user.setUid(id);
+			return urepo.save(user);
+		}
+
+	}
+
+	/** Delete User By UserName */
+	@Override
+	public String DeleteUserByUsername(String name) {
+		User u = urepo.getUserByUserName(name);
+		//System.out.println(urepo.)
+		if (u == null) {
+			throw new UserNotFoundException("User Not Available");
+		} else {
+			urepo.delete(u);
+			return "User Delete Sucessfull....";
+		}
+	}
+
+	/**Admin role to User And User to Admin..*/
+	@Override
+	public User updateRole(String name) {
+		User u = urepo.getUserByUserName(name);
+		if(u==null)
+		{
+			throw new UserNotFoundException("User Not Available");
+		}
+		else 
+		{
+			
+			//return urepo.updateRole(name);
+		}
+		return null;
+	}
+
+	/**User Ragistration with Security...*/
+	public User saveUser(User user) {
+		String encPwd = passwordEncoder.encode(user.getPassword());
+		user.setPassword(encPwd);
+		return urepo.save(user);
+	}
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		Optional<User>optional = urepo.findByUsername(username);
+		if(optional.isEmpty()) 
+		{
+			throw new UsernameNotFoundException(username+"Not Exist User ");
+		}
+		
+		User user = optional.get();
+		List<GrantedAuthority> authorities = user.getRoles()
+				.stream().map(roles->new SimpleGrantedAuthority(roles))
+				.collect(Collectors.toList());
+		return new org.springframework.security.core.userdetails.User(username,user.getPassword(),authorities);
+		
+	}
+}
+
+
+

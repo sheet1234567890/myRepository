@@ -1,0 +1,5 @@
+package com.adda.app.Dao;
+
+public interface IUserInterface {
+
+}

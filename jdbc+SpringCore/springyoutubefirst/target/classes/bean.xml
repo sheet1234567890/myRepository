@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- first bean-->
+	<bean name="student1"
+	class="com.adda.app.bean.Student" 
+	
+	>
+	<property name="studentId" value="101"></property>
+	<property name="studentName" value="Sheetal"></property>
+	<property name="studentAddress" value="indor"></property>
+	</bean>
+	<!-- Second bean-->
+	<bean name="student2"
+	class="com.adda.app.bean.Student">
+	<property name="studentId" value="102"/>
+	<property name="studentName" value="surbhi"/>
+	<property name="studentAddress" value="Bhopal"/>
+	</bean>
+	
+</beans>

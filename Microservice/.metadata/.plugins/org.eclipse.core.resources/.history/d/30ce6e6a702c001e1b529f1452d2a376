@@ -1,0 +1,9 @@
+package com.adda.app.PayLoad;
+
+public class User {
+
+	
+	 private Integer id;
+	 private String FirstName;
+	 private String LastName;
+}

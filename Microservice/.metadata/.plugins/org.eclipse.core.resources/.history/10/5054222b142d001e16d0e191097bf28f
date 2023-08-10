@@ -1,0 +1,9 @@
+package com.adda.app.Service;
+
+import org.springframework.kafka.core.KafkaTemplate;
+
+public class ProductService {
+
+	
+	private KafkaTemplate<String, String>kafkatemplet;
+}

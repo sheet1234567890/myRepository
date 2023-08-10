@@ -1,0 +1,5 @@
+package com.adda.app.Bean;
+
+public class Student {
+
+}

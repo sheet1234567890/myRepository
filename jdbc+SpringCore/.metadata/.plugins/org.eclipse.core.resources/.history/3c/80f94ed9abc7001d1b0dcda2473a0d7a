@@ -1,0 +1,63 @@
+package com.adda.Emp;
+
+import java.util.Scanner;
+
+import com.adda.DAO.EmpDAOinterface;
+import com.adda.DAO.impl.EmpDAOimpl;
+import com.adda.bean.Employee;
+
+public class Emp {
+    public void InsertRecodofEmp() 
+    {
+    	Employee e = new Employee();
+    	EmpDAOinterface Ein = new EmpDAOimpl();
+    	Scanner s = new Scanner(System.in); 
+    	System.out.println("Enter Employee id");
+        Integer EMP_ID=s.nextInt();
+        s.nextLine();
+        System.out.println("Enter Employee name");
+        String EMP_NAME = s.nextLine();
+        System.out.println("Enter Employee DEPARTMENT ID");
+        Integer EMP_D_Id = s.nextInt();
+        System.out.println("Enter Employee Salary");
+        Integer EMP_SALARY = s.nextInt();
+        e.setE_id(EMP_D_Id);
+        e.setE_name(EMP_NAME);
+        e.setD_id(EMP_D_Id);
+        e.setE_sal(EMP_SALARY);
+        System.out.println(e);
+        try {
+			if(Ein.signup(e)) {
+			  System.out.println("RECORD SUCCESSFULLY INSRTED.....");       	
+			 }
+			else {
+				System.out.println("Somthing went wrong..plz try again");
+			}
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}	
+    }
+    public void SelectbyId() 
+    {
+    	Scanner s = new Scanner(System.in);
+    	Employee e = new Employee();
+    	System.out.println("Enter id...");
+    	Integer E_id = s.nextInt();
+    	e.setE_id(E_id);
+    	EmpDAOinterface Ein = new EmpDAOimpl();
+    	 e=Ein.selectEmp(E_id);
+    	 System.out.println(e);
+    }
+    
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      Emp  e1 = new Emp();
+     // e1.InsertRecodofEmp();
+      EmpDAOinterface Ein = new EmpDAOimpl();
+     // e1.SelectbyId();
+      Ein.softDelete(1);
+	}
+
+}

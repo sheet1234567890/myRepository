@@ -1,0 +1,10 @@
+package com.adda.app.Entity;
+
+public class Employee {
+
+	private Integer empid;
+	private String empname;
+	private String empdep;
+	private String worklocation;
+	
+}

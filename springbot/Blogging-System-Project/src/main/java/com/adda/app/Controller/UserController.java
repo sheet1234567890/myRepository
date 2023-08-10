@@ -1,0 +1,147 @@
+package com.adda.app.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.adda.app.Entity.Album;
+import com.adda.app.Entity.Comments;
+import com.adda.app.Entity.LoginUser;
+import com.adda.app.Entity.Post;
+import com.adda.app.Entity.Todos;
+import com.adda.app.Entity.User;
+import com.adda.app.Exceptions.DuplicateEntryException;
+import com.adda.app.Exceptions.UserNotFoundException;
+import com.adda.app.Service.IUserService;
+
+
+@RestController
+@RequestMapping("/api/user")
+public class UserController {
+	@Autowired
+	private IUserService uservice;
+
+	
+	
+	
+
+	/** 1.Create User By Post Method.......... */
+	@PostMapping("/create")
+	public ResponseEntity<User> UserCreate(@RequestBody User user) {
+		ResponseEntity<User> response = null;
+		try {
+			response = new ResponseEntity<User>(uservice.RagisterUser(user), HttpStatus.CREATED);
+		} catch (DuplicateEntryException e) {
+			throw e;
+		}
+		return response;
+	}
+
+	/** 2.Login User By Get Method........ */
+
+	@GetMapping("/login/{email}/{pass}")
+	public ResponseEntity<User> LoginUser(@PathVariable("email") String email, @PathVariable("pass") String pass) {
+		ResponseEntity<User> response = null;
+		try {
+			response = new ResponseEntity<User>(uservice.SignUpUser(email, pass), HttpStatus.OK);
+		} catch (UserNotFoundException e) {
+			throw e;
+		}
+		return response;
+	}
+
+	/** 3. Login User By Post Method.... */
+	@PostMapping("/loginuser")
+	public ResponseEntity<User> LoginUserByEmailAndPassWord(@RequestBody LoginUser loginuser) {
+                  System.out.println(loginuser);
+		try {
+			return new ResponseEntity<User>(uservice.LoginUser(loginuser), HttpStatus.OK);
+		} catch (UserNotFoundException e) {
+			throw e;
+		}
+	}
+
+	/** 4. Get User Profile by User name */
+	@GetMapping("/profilebyname/{name}")
+	public ResponseEntity<User> Userprofile(@PathVariable("name") String name) {
+
+		try {
+			return new ResponseEntity<User>(uservice.profile(name), HttpStatus.OK);
+		} catch (UserNotFoundException e) {
+			throw e;
+		}
+	}
+
+	/** 5.Get Post By User Name */
+	@GetMapping("/{name}/posts")
+	public ResponseEntity<Post> getPostByUserName(@PathVariable("name") String name) {
+		try {
+			return new ResponseEntity<Post>(uservice.getPostByUserName(name), HttpStatus.OK);
+		} catch (UserNotFoundException e) {
+			throw e;
+		}
+	}
+
+	/** 6. Get Album By User Name */
+	@GetMapping("/{name}/albums")
+	public ResponseEntity<Album> getAlbumByUserName(@PathVariable("name") String name) {
+		try {
+			return new ResponseEntity<Album>(uservice.getAlbumByUserName(name), HttpStatus.OK);
+		} catch (UserNotFoundException e) {
+			throw e;
+		}
+	}
+	/** 7.CheakName Name Exists or not Exists*/
+	@GetMapping("/cheakname/{name}")
+	public ResponseEntity<String>cheakUserName(@PathVariable String name)
+	{
+		return new ResponseEntity<String>(uservice.CheakUserName(name),HttpStatus.OK);
+	}
+	/** 8.cheakEmail Email Exists or not Exists*/
+	@GetMapping("/cheakemail/{email}")
+	public ResponseEntity<String>cheakUserEmail(@PathVariable("email") String email)
+	{
+		return new ResponseEntity<String>(uservice.CheakUserEmail(email),HttpStatus.OK);
+	}
+	
+	/** 9. Create Comment By User..*/
+	@PostMapping("/create/Comment")
+	public ResponseEntity<Comments>CreateComment(@RequestBody Comments comments)
+	{
+		return new ResponseEntity<Comments>(uservice.CreateComment(comments),HttpStatus.CREATED);
+	}
+
+	/**10. Create Todos By User*/
+	@PostMapping("/create/todos")
+	public ResponseEntity<Todos>CreateTodos(@RequestBody Todos todos)
+	{
+		return new ResponseEntity<Todos>(uservice.CreateTodos(todos),HttpStatus.OK);
+				
+	}
+	/**11.Update User By UserName....*/
+	@PutMapping("/update/{username}")
+	public ResponseEntity<User>updateUser(@RequestBody User user,@PathVariable("username")String username)
+	{
+		System.out.println(username+" "+user);
+		return new ResponseEntity<User>(uservice.updateUser(user, username),HttpStatus.OK);
+	}
+	/**12.User Delete By UserName*/
+	@DeleteMapping("/delete/{username}")
+	public ResponseEntity<String>deleteUser(@PathVariable("username")String username)
+	{
+		
+		return new ResponseEntity<String>(uservice.DeleteUserByUsername(username),HttpStatus.OK);
+	}
+	
+	
+	
+}

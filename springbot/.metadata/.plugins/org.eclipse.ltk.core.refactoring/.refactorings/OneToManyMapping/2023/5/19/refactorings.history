@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.adda.app.Repo.OneToManyInterface&apos; to &apos;ModelRepo&apos;&#x0D;&#x0A;- Original project: &apos;OneToManyMapping&apos;&#x0D;&#x0A;- Original element: &apos;com.adda.app.Repo.OneToManyInterface&apos;&#x0D;&#x0A;- Renamed element: &apos;com.adda.app.Repo.ModelRepo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;OneToManyInterface&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.adda.app.Repo{OneToManyInterface.java[OneToManyInterface" matchStrategy="1" name="ModelRepo" qualified="false" references="true" similarDeclarations="false" stamp="1683542007955" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,14 @@
+package com.adda.app.Entity;
+
+public class Attandance {
+
+	
+	private Integer aid;
+	private Employee eid;
+	private String month;
+	private Integer dayOfMonth;
+	private Integer presentdays;
+	private Double salary;
+	private Double performanceofmonth;
+	
+}

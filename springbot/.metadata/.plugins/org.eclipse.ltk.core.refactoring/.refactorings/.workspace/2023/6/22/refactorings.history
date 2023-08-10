@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;APIFirstTrial&apos; to &apos;APIFirstTrialOneToMany&apos;" description="Rename resource &apos;APIFirstTrial&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/APIFirstTrial" name="APIFirstTrialOneToMany" stamp="1685595700844" updateReferences="true"/>
+</session>

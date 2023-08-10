@@ -1,0 +1,373 @@
+package com.adda.app.Controller;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
+import com.adda.app.Bean.Admin;
+import com.adda.app.Bean.Contect;
+import com.adda.app.Bean.Group;
+import com.adda.app.Bean.User;
+import com.adda.app.DAO.IAdminInterFace;
+import com.adda.app.DAO.IContectInterface;
+import com.adda.app.DAO.IGroupInterface;
+import com.adda.app.DAO.IUserInterface;
+import com.adda.app.DAO.impl.GroupInterfaceImpl;
+import com.adda.app.DAO.impl.IAdminInterfaceImpl;
+import com.adda.app.DAO.impl.IContectInterfaceImpl;
+import com.adda.app.DAO.impl.UserInterfaceimpl;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class PhoneBookController
+ */
+public class PhoneBookController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    private IUserInterface i = new UserInterfaceimpl();
+    private IContectInterface i1 = new IContectInterfaceImpl();
+    private IAdminInterFace i2 = new IAdminInterfaceImpl();
+    private IGroupInterface i3 = new GroupInterfaceImpl();
+    private User u=null;
+    private Contect c=null;
+    private Admin a=null;
+    private Group g=null;
+    private List<Contect>conlist=null;
+    private RequestDispatcher rd=null;
+    private HttpSession session;
+    /**
+     * Default constructor. 
+     */
+    public PhoneBookController() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String action = request.getParameter("Action");
+		//System.out.println(action);
+		switch(action) 
+		{
+		case "ADDUSER":
+			u=new User();
+			u.setuName(request.getParameter("Name"));
+			u.setuEmail(request.getParameter("Email"));
+			u.setuAddress(request.getParameter("Address"));
+			u.setuMobile(request.getParameter("Mobile"));
+			u.setuPassword(request.getParameter("Password"));
+			u.setuRole(request.getParameter("Role"));
+			
+			try {
+				i.save(u);
+				System.out.println("Contect Add SuccessFull.....!");
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				
+			}
+			 rd = request.getRequestDispatcher("./index.jsp");
+             rd.forward(request, response);
+			break;
+			
+		case"LOGIN":
+			u=new User();
+			
+			String email=request.getParameter("Email");
+			String pass=request.getParameter("Password");
+			u=i.LoginUser(email,pass);
+			System.out.println(email+"  "+pass);
+			System.out.println(u);
+			if(u.getuId()!=null) 
+			{
+              if(u.getuRole().equals("user")) 
+              {
+            	  session = request.getSession();
+            	 System.out.println("hello");
+            	  session.setAttribute("uId", u.getuId());
+            	  request.setAttribute("user", u);
+            	  rd = request.getRequestDispatcher("./UserDesboard.jsp");
+                  rd.forward(request, response);
+              }
+              else 
+              {
+            	  session = request.getSession();
+            	  session.setAttribute("uId",u.getuId());
+            	  request.setAttribute("Admin", u);
+            	  rd = request.getRequestDispatcher("./AdminDesboard.jsp");
+                  rd.forward(request, response);  
+              }
+              
+			}
+			else
+			{
+				System.out.println("..........");
+	              rd = request.getRequestDispatcher("./index.jsp");
+	              rd.forward(request, response);
+			}
+		    break;		
+		    
+		case"LOGOUT":
+			session.invalidate();
+			rd=request.getRequestDispatcher("./index.jsp");
+			rd.forward(request, response);
+			break;
+			
+		case "UPDATEPROFILE":
+			u=new User();
+			u.setuId((Integer)session.getAttribute("uId"));
+			u.setuName(request.getParameter("Name"));
+			u.setuEmail(request.getParameter("Email"));
+			u.setuAddress(request.getParameter("Address"));
+			u.setuMobile(request.getParameter("Mobile"));
+			//u.setuPassword(request.getParameter("Password"));
+			try {
+				i.save(u);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			 request.setAttribute("user", u);
+       	     rd = request.getRequestDispatcher("./UserDesboard.jsp");
+             rd.forward(request, response);
+             break;
+		case "GETUSER":
+			 u = new User();
+			 u=i.updateById((Integer)session.getAttribute("uId"));
+			 request.setAttribute("user", u);
+       	     rd = request.getRequestDispatcher("./pages/login/profile.jsp");
+             rd.forward(request, response);
+             break;
+		case "TOCREATCONTECT":
+			u=new User();
+			u=i.updateById((Integer)session.getAttribute("uId"));
+			request.setAttribute("user", u);
+			rd=request.getRequestDispatcher("./pages/ui-features/creatapp.jsp");
+			rd.forward(request, response);
+			break;
+		case "ADDCONTECT":
+			c=new Contect();
+			u=new User();
+			c.setcName(request.getParameter("Name"));
+			c.setcEmail(request.getParameter("Email"));
+			c.setcMobile(request.getParameter("Phone"));
+			c.setcAddress(request.getParameter("Address"));
+			c.setcIsfav(false);
+			c.setCuId((Integer)session.getAttribute("uId"));
+			c.setGuId(1);
+			i1.save(c);
+			System.out.println("Add 1 Contect"+c);
+			 request.setAttribute("user", u);
+       	     rd = request.getRequestDispatcher("./UserDesboard.jsp");
+             rd.forward(request, response);
+			break;
+		case "TOVIEWCONTECT":
+			
+			viewContect(request,response);
+			break;
+		case "TOEDITCONTECT"	:
+			System.out.println("sheetal");
+			System.out.println(request.getParameter("cid"));
+			 c = i1.updateContectById(Integer.parseInt(request.getParameter("cid")));
+			 u = new User();
+			 u=i.updateById((Integer)(session.getAttribute("uId")));
+			 System.out.println(u);
+			 request.setAttribute("user", u);
+			 request.setAttribute("contect",c );
+			 rd=request.getRequestDispatcher("./pages/ui-features/editContact.jsp");
+			 rd.forward(request, response);
+			 break;
+		case "EDITCONTECT":
+			c.setcId(Integer.parseInt(request.getParameter("conId")));
+			c.setcName(request.getParameter("conName"));
+			c.setcEmail(request.getParameter("conEmail"));
+			c.setcMobile(request.getParameter("conMobaile"));
+			c.setcAddress(request.getParameter("conAddress"));
+			i1.save(c);
+			viewContect(request,response);
+			 break;
+		case "DELETECONTECT":
+			 Contect Deletecon=null;
+			 System.out.println((Integer.parseInt(request.getParameter("cid"))));
+			 System.out.println(i1.deleteContectById(Integer.parseInt(request.getParameter("cid"))));
+			 viewContect(request,response);
+			 break;
+			 
+		}
+		
+		
+		//1. addUser
+		/*u=new User();
+		u.setuName("ishwari");
+		u.setuAddress("pidhay");
+		u.setuEmail("sheetal@gmail.com");
+		u.setuMobile("12345677");
+		u.setuPassword("sheetal123");
+		u.setuRole("user");
+	  try {
+		i.save(u);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}*/
+		
+		
+		//2.view AllStudentList
+//		u=new User();
+//		List<User> l=i.viewAllUser();
+//		
+//		for(User u:l) 
+//	   {
+//			System.out.println(u);
+//	   }
+		
+		
+		
+		//3. Delete By id 
+		//i.deleteById(2);
+		
+		
+	 //4. UpdateUser 
+//     	u=new User();
+//		u.setuId(14);	
+//		u.setuName("Rajesh Patidar");
+//		u.setuAddress("pidhay Bujurg");
+//		u.setuEmail("rajesh@gmail.com");
+//		u.setuMobile("12345677");
+//		u.setuPassword("rajesh123");
+//    	u.setuRole("user");
+//	  try
+//	   {
+//		i.save(u);
+//	    }
+//	  catch (SQLException e) {
+//	// TODO Auto-generated catch block
+//		e.printStackTrace();
+		  //}
+	/*  List<User> l=i.viewAllUser();
+	 System.out.println(l);*/
+		
+		
+		
+		//1.addContect
+		/*c=new Contect();
+		c.setcName("surbhi");
+		c.setcEmail("sheetal@gmail.com");
+		c.setcMobile("7067576774");
+		c.setcAddress("indor");
+		c.setcIsfav(false);
+		c.setCuId(10);
+		c.setGuId(1);
+		i1.save(c);*/
+
+		//2.updateContect
+//		c=new Contect();
+//		c.setcId(2);
+//		c.setcName("ishhhhhhhhhhhh");
+//		c.setcEmail("ishhh@gmail.com");
+//		c.setcMobile("7067576774");
+//		c.setcAddress("indor-bhawarkuaa");
+//		c.setcIsfav(false);
+//		c.setCuId(5);
+//		c.setGuId(1);
+//		i1.save(c);
+		
+		//3.viewAllContect
+	/*	List<Contect>list=i1.viewAllContect();
+		for(Contect con :list) 
+		{
+			System.out.println(con);
+		}*/
+		
+		//4.Delete Contect
+		//i1.deleteContectById(3);
+		
+		//1.AddAdmin
+		/*a= new Admin();
+		a.setaName("shivani gurjar");
+	    a.setaEmail("shivani@gmail.com");
+		a.setaAddress("bhopal");
+		a.setaRole("admin");
+		a.setaPassword("admin@123");
+		a.setaMobile("56473839920");
+    	try {
+		i2.save(a);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} */
+		
+		//2.updateAdmin
+    	/*a= new Admin();
+		a.setaId(35);
+		a.setaName("shivani gurjar");
+	    a.setaEmail("shivani@gmail.com");
+		a.setaAddress("bhopal");
+		a.setaRole("admin");
+		a.setaPassword("admin@123");
+		a.setaMobile("56473839920");
+    	try {
+		i2.save(a);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} */
+		
+		//3.DeleteAdmin
+		//i2.deleteAdminById(35);
+		
+		//4. viewAdmin
+      /*     
+		List<Admin>adlist =i2.viewAddminList();
+		for(Admin admin:adlist) 
+		{
+			System.out.println(admin);
+		}
+		*/
+		
+		//1.addGROUP
+//      	g= new Group();
+//      	g.setgId(2);
+//      	g.setgName("famaily");
+//      	g.setgIsfav(false);
+//        i3.save(g);
+      	
+}
+	
+
+	private void viewContect(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		u = new User();
+		conlist=i1.viewAllContect((Integer)session.getAttribute("uId"));
+		u=i.updateById((Integer)session.getAttribute("uId"));
+		request.setAttribute("user", u);
+		request.setAttribute("conlist", conlist);
+		System.out.println("viewAllContect");
+		rd=request.getRequestDispatcher("./pages/ui-features/viewapp.jsp");
+		rd.forward(request, response);
+		
+	}
+	private void userToDesktop(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException 
+	{
+		u=new User();
+		u=i.updateById((Integer)session.getAttribute("uId"));
+		request.setAttribute("user", u);
+		rd=request.getRequestDispatcher("./UserDesboard.jsp");
+		rd.forward(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

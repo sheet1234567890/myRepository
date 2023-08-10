@@ -1,0 +1,20 @@
+package com.adda.app.producer;
+
+import org.slf4j.LoggerFactory;
+import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
+
+@Service
+public class jsonKafkaProducer {
+
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(jsonKafkaProducer.class);
+	
+	private KafkaTemplate<String, User> kafkaTemplate;
+
+	public jsonKafkaProducer(KafkaTemplate<String, User> kafkaTemplate) {
+		super();
+		this.kafkaTemplate = kafkaTemplate;
+	}
+	
+}

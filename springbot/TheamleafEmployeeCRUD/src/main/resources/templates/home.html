@@ -1,0 +1,87 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<title>EMPLOYEE MANAGMENT SYSTEM</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+	
+</head>
+<body>
+	 <div  class="container my-2" > 
+	
+		<h1>Employee Managment System</h1>
+		<a th:href="@{/show}" class="btn btn-primary btn-sm mb-3" >ADD EMPLOYEE</a>
+		<div>&nbsp;</div>
+		<div>
+		<form th:action="@{/s}">
+		filter:<input type="text" name="keyword" required/>&nbsp;
+		<input type="submit" value="search"/> &nbsp;
+		<a th:href="@{/}"><input type="button"  value="clear"/></a>
+		
+		</form>
+		</div>
+		<div>&nbsp;</div>
+		</div>
+			<!-- 	<a th:href="@{/show}" class="btn btn-primary btn-sm mb-3" >ADD EMPLOYEE</a> -->
+		<table border=1 class="table table-striped table-responsive-md">
+			<thead>
+				<tr>
+					<th>ID</th>
+					 <th>
+					 
+					<a th:href="@{'/page/' +${currentpage} + '?sortField=emapname&sortDir=' + ${reverseSorting}}">NAME</a>
+					</th>
+					<th>
+					<a th:href="@{'/page/' +${currentpage} + '?sortField=empsal&sortDir=' + ${reverseSorting}}">SALARY</a>
+					</th>
+					<th>PASSWORD</th>
+					<th>
+					<a th:href="@{'/page/' +${currentpage} +'?sortField=empdept&sortDir=' + ${reverseSorting}}">DEPARTMENT</a>
+					</th>
+					<th>
+					<a th:href="@{'/page/' +${currentpage} +'?sortField=empadddress&sortDir=' + ${reverseSorting}}">ADDRESS</a>
+					</th>
+					<th>ACTIONS</th>
+				</tr>
+
+			</thead>
+			<tbody>
+				<tr th:each="emp:${emplist}">
+					<td th:text="${emp.empid}"></td>
+					<td th:text="${emp.emapname}"></td>
+					<td th:text="${emp.empsal}"></td>
+					<td th:text="${emp.emppwd}"></td>
+					<td th:text="${emp.empdept}"></td>
+					<td th:text="${emp.empadddress}"></td>
+                    <td> <a th:href="@{/edit/{id}(id=${emp.empid})}" class="btn btn-success btn-sm mb-3">EDIT</a><a th:href="@{/delete/{id}(id=${emp.empid})}"  class="btn btn-danger btn-sm mb-3">DELETE</a></td>
+
+				</tr>
+			</tbody>
+		</table>
+		<div th:if="${totalpage>1}">
+		   <div class="row col-sm-10">
+		      <div class="col-sm-2">
+		        Total Rows:[[${totalitem}]]
+		      </div>
+		      <div class="col-sm-1">
+		      <span th:each="i: ${#numbers.sequence(1,totalpage)}">
+		      <a th:if="${currentpage!=i}" th:href="@{'/page/'+${i}+ '?sortField=' +${sortField}+'&sortDir=' + ${sortDir}}">[[${i}]]</a>
+		      <span th:unless="${currentpage!=i}">[[${i}]]</span>
+		      </span> 
+		      </div>
+		       <div class="col-sm-1">
+		           <a th:if="${currentpage<totalpage}" th:href="@{'/page/'+${currentpage+1}+ '?sortField=' +${sortField}+'&sortDir=' + ${sortDir}}">Next</a>
+		      <span th:unless="${currentpage<totalpage}">Next</span> 
+		      </div>
+		       <div class="col-sm-1">
+		           <a th:if="${currentpage<totalpage}" th:href="@{'/page/'+${totalpage}+'?sortField=' +${sortField}+'&sortDir=' + ${sortDir}}">Last</a>
+		      <span th:unless="${currentpage<totalpage}">Last</span> 
+		      </div>
+		
+		</div>
+	</div>
+
+</body>
+</html>
